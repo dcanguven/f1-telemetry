@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+__pycache__/
+fastf1_cache/*.sqlite
+fastf1_cache/*.json
+*.pyc
