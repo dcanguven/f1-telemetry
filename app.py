@@ -7,7 +7,7 @@ import pandas as pd
 fastf1.Cache.enable_cache("fastf1_cache")
 st.set_page_config(page_title="Lap Telemetry · Session: Race", layout="wide")
 
-st.title("Telemetry - Driver Comparison")
+st.title("Formula 1 - Driver Telemetry Comparison")
 
 colA, colB, colC = st.columns([1, 2, 1])
 
@@ -83,14 +83,14 @@ if st.session_state.get("session_loaded", False):
 
     overall_mode = False
 
-    if st.button("View LAP Telemetry", use_container_width=True, key="view_btn"):
+    if st.button("Single Lap Comparison", use_container_width=True, key="view_btn"):
         st.session_state["driver1"] = driver1
         st.session_state["driver2"] = driver2
         st.session_state["lap_number"] = lap_number
         st.session_state["overall_mode"] = overall_mode
         st.session_state["telemetry_ready"] = True
 
-    if race_mode and st.button("Race Average - Telemetry Data", use_container_width=True, key="overall_btn", type="primary"):
+    if race_mode and st.button("Overall Race Pace Profile", use_container_width=True, key="overall_btn", type="primary"):
         st.session_state["driver1"] = driver1
         st.session_state["driver2"] = driver2
         st.session_state["overall_mode"] = True
